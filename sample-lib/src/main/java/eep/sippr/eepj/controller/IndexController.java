@@ -11,7 +11,7 @@ import eep.sippr.eepj.entity.CourseCategory;
 import eep.sippr.eepj.service.CourseCategoryService;
 
 @Controller
-public class TestController {
+public class IndexController {
 	
 	@Autowired	
 	private CourseCategoryService courseCategoryService;
