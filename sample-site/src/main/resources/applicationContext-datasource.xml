@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:pager="http://eep.sippr.com/schema/mybatis/pager"
+	xsi:schemaLocation="http://eep.sippr.com/schema/mybatis/pager http://eep.sippr.com/schema/mybatis/pager/pager.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.2.xsd">
+
+	<bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource"
+		destroy-method="close">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url"
+			value="jdbc:mysql://localhost:3306/sample?useUnicode=true&amp;roundRobinLoadBalance=true&amp;characterEncoding=UTF-8" />
+		<property name="username" value="root" />
+		<property name="password" value="eepj" />
+		<property name="initialSize" value="1" />
+		<property name="minIdle" value="1" />
+		<property name="maxActive" value="20" />
+		<property name="maxWait" value="60000" />
+		<property name="timeBetweenEvictionRunsMillis" value="60000" />
+
+		<property name="minEvictableIdleTimeMillis" value="300000" />
+		<property name="validationQuery" value="SELECT 'x'" />
+		<property name="testWhileIdle" value="true" />
+		<property name="testOnBorrow" value="false" />
+		<property name="testOnReturn" value="false" />
+		<property name="poolPreparedStatements" value="true" />
+		<property name="maxPoolPreparedStatementPerConnectionSize"
+			value="20" />
+		<property name="filters" value="stat" />
+	</bean>
+
+	<bean id="sqlSessionFactoryBean" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="configuration" ref="configuration" />
+		<property name="dataSource" ref="dataSource" />
+		<property name="mapperLocations">
+			<array>
+				<value>classpath*:mybatis/mapping/*Mapper.xml</value>
+			</array>
+		</property>
+		<property name="plugins">
+			<array>
+				<ref bean="pageInterceptor" />
+			</array>
+		</property>
+	</bean>
+
+	<bean id="configuration" class="org.apache.ibatis.session.Configuration">
+		<property name="mapUnderscoreToCamelCase" value="true" />
+		<property name="logImpl" value="org.apache.ibatis.logging.log4j.Log4jImpl"/>
+	</bean>
+	<pager:annotation-driven dialect="DIALECT_MYSQL"
+		pageInterceptorId="pageInterceptor" />
+
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactoryBean" />
+		<property name="basePackage" value="eep.sippr.eepj.dao" />
+	</bean>
+
+</beans>

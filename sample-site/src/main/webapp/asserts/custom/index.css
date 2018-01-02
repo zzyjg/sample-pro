@@ -1,0 +1,33 @@
+.main .nav.nav-list li.active {
+	background-color: #009ed9;
+	color: #fff;
+}
+
+.main .nav.nav-list li.active a {
+	color: #fff;
+}
+
+.main .nav>li>a:hover, .main .nav>li>a:focus {
+	text-decoration: none;
+	background: rgba(0, 158, 217, 0.64);
+	color: #fff;
+}
+
+.main .nav>li.active>a:hover, .main .nav>li.active>a:focus {
+	text-decoration: none;
+	background: #009ed9;
+	opacity: 1;
+	color: #fff;
+}
+
+.main.container-fluid {
+	padding: 0;
+}
+
+.main.container-fluid .row-fluid>.col-xs-2 {
+	padding: 0;
+}
+
+form .error {
+	color: red;
+}

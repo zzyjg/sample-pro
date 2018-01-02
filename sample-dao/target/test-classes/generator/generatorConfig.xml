@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+	<context id="MysqlTables" targetRuntime="MyBatis3">
+		<plugin type="org.mybatis.generator.plugins.ToStringPlugin" />
+		<plugin type="org.mybatis.generator.plugins.EqualsHashCodePlugin" />
+		<plugin
+			type="eep.sippr.base.common.generate.plugin.PaginationAnnotaionPlugin" />
+		<plugin type="eep.sippr.base.common.generate.plugin.SqlMapUnMergePlugin" />
+		<plugin
+			type="eep.sippr.base.common.generate.plugin.MybatisPaginationPlugin">
+			<property name="extends" value="eep.sippr.base.common.mybatis.BaseMapper" />
+		</plugin>
+		<plugin type="eep.sippr.base.common.generate.plugin.TopSerializablePlugin">
+			<property name="suppressJavaInterface" value="false" />
+		</plugin>
+		
+		<commentGenerator
+			type="eep.sippr.base.common.generate.plugin.DBCommentGenerator">
+			<property name="suppressAllComments" value="true" />
+		</commentGenerator>
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://localhost:3306/sample?useUnicode=true&amp;characterEncoding=UTF-8"
+			userId="root" password="eepj">
+			<property name="remarksReporting" value="true" />
+		</jdbcConnection>
+		
+		<!-- POJO类生成配置 -->
+		<javaModelGenerator targetPackage="eep.sippr.eepj.entity"
+			targetProject="../sample-dao/src/main/java">
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+
+		<!-- SqlMap文件生成配置 -->
+		<sqlMapGenerator targetPackage="mybatis/mapping"
+			targetProject="../sample-dao/src/main/resources">
+		</sqlMapGenerator>
+		<javaClientGenerator type="XMLMAPPER"
+			targetPackage="eep.sippr.eepj.dao" targetProject="../sample-dao/src/main/java">
+		</javaClientGenerator>
+
+		<!-- Dao生成配置 -->
+		<table tableName="course_category" domainObjectName="CourseCategory">
+			<generatedKey column="id" sqlStatement="MySql" identity="true" />
+		</table>
+		<table tableName="course" domainObjectName="Course">
+			<generatedKey column="id" sqlStatement="MySql" identity="true" />
+		</table>
+	</context>
+
+</generatorConfiguration>
+

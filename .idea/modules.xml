@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/sample-api-lib/sample-api-lib.iml" filepath="$PROJECT_DIR$/sample-api-lib/sample-api-lib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sample-dao/sample-dao.iml" filepath="$PROJECT_DIR$/sample-dao/sample-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sample-lib/sample-lib.iml" filepath="$PROJECT_DIR$/sample-lib/sample-lib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sample-pro.iml" filepath="$PROJECT_DIR$/sample-pro.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sample-service/sample-service.iml" filepath="$PROJECT_DIR$/sample-service/sample-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sample-site/sample-site.iml" filepath="$PROJECT_DIR$/sample-site/sample-site.iml" />
+    </modules>
+  </component>
+</project>

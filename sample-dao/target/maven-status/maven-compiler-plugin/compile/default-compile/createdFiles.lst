@@ -1,0 +1,12 @@
+eep\sippr\eepj\entity\CourseExample$GeneratedCriteria.class
+eep\sippr\eepj\entity\CourseExample.class
+eep\sippr\eepj\entity\Course.class
+eep\sippr\eepj\entity\CourseCategoryExample$Criterion.class
+eep\sippr\eepj\entity\CourseExample$Criterion.class
+eep\sippr\eepj\dao\CourseMapper.class
+eep\sippr\eepj\entity\CourseCategoryExample$GeneratedCriteria.class
+eep\sippr\eepj\dao\CourseCategoryMapper.class
+eep\sippr\eepj\entity\CourseCategoryExample.class
+eep\sippr\eepj\entity\CourseCategoryExample$Criteria.class
+eep\sippr\eepj\entity\CourseExample$Criteria.class
+eep\sippr\eepj\entity\CourseCategory.class

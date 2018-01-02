@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: eep.sippr.base:mybatis-common-generator-tools:0.0.2-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/eep/sippr/base/mybatis-common-generator-tools/0.0.2-SNAPSHOT/mybatis-common-generator-tools-0.0.2-20171208.040157-2.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/eep/sippr/base/mybatis-common-generator-tools/0.0.2-SNAPSHOT/mybatis-common-generator-tools-0.0.2-20171208.040157-2-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/eep/sippr/base/mybatis-common-generator-tools/0.0.2-SNAPSHOT/mybatis-common-generator-tools-0.0.2-20171208.040157-2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
