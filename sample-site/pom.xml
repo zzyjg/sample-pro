@@ -19,21 +19,7 @@
 			<artifactId>sample-api-lib</artifactId>
 		</dependency>
 
-		<!-- others -->
-		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>javax.servlet-api</artifactId>
-		</dependency>
-
-		<!-- log4j -->
-		<dependency>
-			<groupId>log4j</groupId>
-			<artifactId>log4j</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>osgi-over-slf4j</artifactId>
-		</dependency>
+		<!-- others -->			
 		
 		<dependency>
 			<groupId>jstl</groupId>
