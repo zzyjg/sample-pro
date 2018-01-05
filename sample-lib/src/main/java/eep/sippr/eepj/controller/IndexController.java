@@ -6,7 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
- 
+import org.springframework.web.bind.annotation.RequestParam;
+
 import eep.sippr.eepj.entity.CourseCategory;
 import eep.sippr.eepj.service.CourseCategoryService;
 
@@ -20,6 +21,11 @@ public class IndexController {
 	public String index() {
 		return "index";
 	}
+	@RequestMapping("register")
+	public String register(@RequestParam(value = "username") String username) {
+		return "index";
+	}
+	
 	
 	@RequestMapping("insert")
 	public String insert(Model model) {		
